@@ -1,0 +1,31 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: your-service
+  description: Awesome service for awesome things
+  annotations:
+    backstage.io/kubernetes-namespace: your-service
+    datadoghq.com/site: datadoghq.com
+    datadoghq.com/dashboard-url: https://p.datadoghq.com/some-dashbaord
+    firehydrant.com/service-name: your-service
+    jira/project-key: your-jira-project
+    github.com/project-slug: 'your-org/your-service'
+    pagerduty.com/service-id: your-pagerduty-service-id
+  links:
+    - title: Team Slack Channel
+      url: https://your-company.slack.com/archives/your-slack-channel-id
+      type: Slack
+      icon: chat
+    - title: Getting started
+      url: https://github.com/your-org/your-service/blob/main/README.md
+      type: Readme
+      icon: github
+    - title: Confluence
+      url: https://your-company.atlassian.net/your-docs-page-url
+      type: Confluence
+      icon: docs
+spec:
+  type: service
+  lifecycle: production
+  owner: your-team
+  system: your-business-unit
